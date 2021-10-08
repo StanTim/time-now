@@ -6,6 +6,7 @@ i = ARGV[0].to_i
 
 i = 10 if ARGV[0].nil? || ARGV[0] == 0
 
-time = Time.now
-
-i.times puts Time.now if Time.now - time >= i
+i.times {
+  sleep 1
+  puts Time.now
+}
