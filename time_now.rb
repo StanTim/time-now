@@ -4,9 +4,14 @@
 # Переменная
 i = ARGV[0].to_i
 
-i = 10 if ARGV[0].nil? || ARGV[0] == 0
+if ARGV[0].nil? || ARGV[0] == 0
+  puts "Пожалуйста, введите целое число"
+  i = STDIN.gets.to_i
+end
+
+i = 10 if i == 0 || i.nil?
 
 i.times {
-  sleep 1
   puts Time.now
+  sleep 1
 }
